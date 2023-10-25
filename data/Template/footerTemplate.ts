@@ -1,12 +1,12 @@
 
-interface LinkItem {
+ export interface LinkItem {
     id: number;
     name: string;
     link: string;
     new?: boolean;
 }
 
-interface FooterCategory {
+export interface FooterCategory {
     id: number;
     name: string;
     link: string;
