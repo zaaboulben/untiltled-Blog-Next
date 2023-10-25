@@ -13,7 +13,7 @@ export default function Head() {
 
                     
                 </ul>
-                <div className=" items-end justify-end flex w-[30rem] max-w-full  gap-8   pr-8">
+                <div className=" items-end justify-end flex w-[20vw] max-w-full  gap-8   pr-10">
                         <button className="text-gray-500 text-base font-semibold leading-[150%] self-center my-auto">
                             
                             <p>Log in</p>
