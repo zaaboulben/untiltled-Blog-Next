@@ -8,7 +8,7 @@ export default function BlogPostCTA() {
     return (
     <section className="w-full   ">
         <div className="w-full inline-flex justify-between   ">
-        <div  className="sm:inline-flex w-full sm:justify-start items-start pb-20 flex flex-col gap-7 ">
+        <div  className="sm:flex-row w-full sm:justify-start sm:items-start pb-20 flex flex-col gap-7 ">
         <div  >
             <p className="text-gray-900 text-5xl font font-semibold leading-10 pb-8" >
                 No Long-term contracts.
@@ -19,7 +19,7 @@ export default function BlogPostCTA() {
             <p className="text-gray-500 text-xl font-normal leading-9 pb-10">
                 Start your 30-days free trial today.
             </p>
-            <div className="sm:inline-flex sm:w-80 gap-4 sm:h-12 flex flex-col justify-between">
+            <div className="sm:flex-row sm:w-80 gap-4 sm:h-12 flex flex-col justify-between">
                 <button className="px-5 py-3 bg-white rounded-lg shadow border border-gray-300 justify-center items-center  flex text-slate-700 text-base font-semibold leading-normal">
                     Learn more
                 </button>
