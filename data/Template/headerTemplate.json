@@ -2,12 +2,12 @@
 {
     "id": 1,
     "name": "Untitled Blog",
-    "Link":"/Home"
+    "Link":"/"
 },
 {
     "id": 2,
     "name": "Home",
-    "Link":"/Home"
+    "Link":"/"
 },
 {
     "id": 3,

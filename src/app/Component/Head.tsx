@@ -1,9 +1,13 @@
+"use client"
+import Image from "next/image";
 import headerTemplate from "../../../data/Template/headerTemplate.json";
+import { useState } from "react";
 export default function Head() {
+    const [isOpened, setIsOpened] = useState(false);
     return (
-        <header className="  pl-8 bg-violet-50 justify-start  items-start flex  max-md:flex-wrap w-full pt-8">
-            <nav className=" items-start self-center flex w-[100vw] max-w-full  gap-8 my-auto px-5 max-md:flex-wrap">
-                <ul className="items-start self-center  flex w-[80vw] max-w-full grow shrink-0 basis-auto  gap-8 my-auto max-md:justify-center">
+        <header className="  pl-8 bg-violet-50 justify-start  items-start   md:flex-nonwrap w-full pt-8 pr-8">
+            <nav className=" items-start self-center  justify-between lg:inline-flex gap-8 my-auto px-5 max-md:flex-wrap w-full  lg:block  hidden  ">
+                <ul className="items-start self-center  flex w-[50vw]   basis-auto  gap-8 my-auto ">
                     {headerTemplate.map((element) => (
                         <li className="text-gray-500 self-center" key={element.id}>
                            
@@ -13,7 +17,7 @@ export default function Head() {
 
                     
                 </ul>
-                <div className=" items-end justify-end flex w-[20vw] max-w-full  gap-8   pr-10">
+                <div className=" items-end justify-end flex   gap-8  pr-10">
                         <button className="text-gray-500 text-base font-semibold leading-[150%] self-center my-auto">
                             
                             <p>Log in</p>
@@ -25,6 +29,43 @@ export default function Head() {
                         </button>
                     </div>
             </nav>
+            {/* Mobile style  */}
+            <nav className=" w-full  lg:hidden    inline-flex justify-between ">
+            <p className="text-gray-500 whitespace-nowrap " > Untitled-Blog</p>
+                <div className="w-full inline-flex justify-between items-center ">
+                
+
+                <div className=" w-full flex flex-col justify-end items-end">
+                        <button onClick={()=>setIsOpened(!isOpened)} className=""  >
+                            {isOpened&&
+                            <Image width={20} height={20} alt="buttonhome"  src={"/X.png"} />
+                            }
+                            {!isOpened&&
+                                 <Image width={30} height={30} alt="buttonhome"  src={"/navButoon.png"} /> 
+                            }
+                        </button>
+                        {isOpened &&
+                            
+                                  <ul className=" p-2  gap-4 self-center  flex flex-col    ">
+                    {headerTemplate.map((element) => (
+                        <li className="text-gray-500 self-center" key={element.id}>
+                           
+                            <a href={element.Link}>{element.name}</a>
+                        </li>
+                    ))}
+
+                    
+                </ul>
+                           
+                        
+                        
+                        }
+                </div>
+
+                </div>
+            </nav>
+
         </header>
+
     );
 }
